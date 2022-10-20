@@ -18,7 +18,7 @@ function ConvertHandler() {
     } else {
       result = Number(result);
       if (isNaN(result)) return null;
-      return result;
+      return result.toFixed(5);
     }
   };
 
