@@ -20,13 +20,17 @@ suite('Unit Tests', function () {
 
     test('3. read a fractional input', (done) => {
       let input = '4/9L';
-      assert.equal(convertHandler.getNum(input), 4 / 9);
+      let output = 4 / 9;
+      output = output.toFixed(5);
+      assert.equal(convertHandler.getNum(input), output);
       done();
     });
 
     test('4. read a fractional input with a decimal', (done) => {
       let input = '4.9/9.4L';
-      assert.equal(convertHandler.getNum(input), 4.9 / 9.4);
+      let output = 4.9 / 9.4;
+      output = output.toFixed(5);
+      assert.equal(convertHandler.getNum(input), output);
       done();
     });
 

@@ -14,11 +14,12 @@ function ConvertHandler() {
     if (count > 1) return null;
     if (count === 1) {
       let arr = result.split('/');
-      return Number(arr[0]) / Number(arr[1]);
+      result = Number(arr[0]) / Number(arr[1]);
+      return parseFloat(result.toFixed(5));
     } else {
       result = Number(result);
       if (isNaN(result)) return null;
-      return result.toFixed(5);
+      return parseFloat(result.toFixed(5));
     }
   };
 
@@ -110,7 +111,7 @@ function ConvertHandler() {
         break;
     }
 
-    return result.toFixed(5);
+    return parseFloat(result.toFixed(5));
   };
 
   this.getString = function (initNum, initUnit, returnNum, returnUnit) {
